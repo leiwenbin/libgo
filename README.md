@@ -1,6 +1,6 @@
 # libgo
 
-[![Build Status](https://travis-ci.org/yyzybb537/libgo.svg?branch=master)](https://travis-ci.org/yyzybb537/libgo.svg?branch=master)
+[![Build Status](https://travis-ci.org/yyzybb537/libgo.svg?branch=master)](https://travis-ci.org/yyzybb537/libgo)
 
 ### libgo  - 协程库、并行编程库
 
@@ -8,11 +8,14 @@ libgo是一个使用C++11编写的协作式调度的stackful协程库,
 
 同时也是一个强大的并行编程库, 是专为Linux服务端程序开发设计的底层框架。
 
-目前支持两个平台:
+目前支持三个平台:
 
     Linux   (GCC4.8+)
     
     Windows (Win7、Win8、Win10 x86 and x64 使用VS2013/2015编译)
+    
+    Mac (在mac分支上, 感谢群友 @eagle518 的贡献)
+
 
 使用libgo编写并行程序，即可以像golang、erlang这些并发语言一样开发迅速且逻辑简洁，又有C++原生的性能优势，鱼和熊掌从此可以兼得。
 
@@ -128,7 +131,7 @@ libgo有以下特点：
 
         2.不要让一个代码段耗时过长。协程的调度是协作式调度，需要协程主动让出执行权，推荐在耗时很长的循环中插入一些yield
 
-	3.除网络IO、sleep以外的阻塞系统调用，会真正阻塞调度线程的运行，请使用co_await, 并启动几个线程去Run内置的线程池.
+        3.除网络IO、sleep以外的阻塞系统调用，会真正阻塞调度线程的运行，请使用co_await, 并启动几个线程去Run内置的线程池.
 
 ##### Linux系统上Hook的系统调用列表：
 * 
