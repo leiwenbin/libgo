@@ -8,7 +8,7 @@
 #include <libgo/sleep_wait.h>
 #include <libgo/processer.h>
 #include <libgo/debugger.h>
-#include "io_wait.h"
+#include <libgo/linux/io_wait.h>
 
 namespace co {
 

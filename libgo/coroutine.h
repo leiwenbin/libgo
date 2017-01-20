@@ -5,7 +5,7 @@
 #include <libgo/co_rwmutex.h>
 #include <libgo/debugger.h>
 #if __linux__
-#include "linux_glibc_hook.h"
+#include <libgo/linux/linux_glibc_hook.h>
 #endif
 
 namespace co

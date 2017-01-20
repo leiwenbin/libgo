@@ -4,7 +4,7 @@
 #include <libgo/coroutine.h>
 using namespace std;
 
-static const int N = 1000000;
+static const int N = 10000000;
 
 template <typename T>
 void dump(string name, int n, T start, T end)
